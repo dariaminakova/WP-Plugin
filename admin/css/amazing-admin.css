@@ -1,0 +1,180 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.wrap {
+  position: relative;
+}
+
+#adminmenu .wp-menu-image img {
+  width: 20px;
+}
+
+.preview-table {
+  margin: 0 auto;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 3px;
+  text-align: center;
+  width: max-content;
+}
+
+.common-button {
+  vertical-align: top;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 2.15384615;
+  min-height: 30px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-appearance: none;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.update-button {
+  color: green;
+  border-color: green;
+  background: #f3f5f6;
+  width: 80px;
+}
+.update-button:hover {
+  background: green;
+  color: #f3f5f6;
+}
+
+.delete-button {
+  color: red;
+  border-color: red;
+  background: #f3f5f6;
+  margin-left: 20px;
+}
+
+.delete-button:hover {
+  background: red;
+  color: #f3f5f6;
+}
+
+.close-button {
+  background-color: red;
+  border-color: red;
+  color: #f3f5f6;
+  text-transform: uppercase;
+}
+
+.close-button:hover {
+  background: rgb(216, 41, 41);
+}
+
+.preview-table-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.preview-table-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+.preview-table-item .img {
+  width: 350px;
+  height: 350px;
+}
+
+.preview-table-item .web-site a {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+}
+
+.preview-table-item .partners-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.preview-table-item .date {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: #999999;
+}
+
+.button.button-primary.submit-button {
+  margin-top: 20px;
+  max-width: 100px;
+}
+
+#add_new_slider {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 20px;
+}
+
+.upload-img {
+  cursor: pointer;
+  max-width: 110px;
+  text-transform: uppercase;
+}
+#upload-img {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+/* modal window */
+.edit-table.hide {
+  display: none;
+}
+
+.edit-table.show {
+  display: block;
+  position: absolute;
+  padding: 20px;
+  background-color: #d4d4d4;
+  border-radius: 3px;
+  border: 1px solid #888888;
+  top: 40%;
+  left: 20%;
+  opacity: 999;
+  z-index: 2;
+}
+
+.update_slider {
+  display: flex;
+  flex-direction: column;
+  min-width: 420px;
+}
+
+.mrg {
+  margin: 20px 0;
+}
+
+.title-box {
+  position: relative;
+}
+
+.position {
+  position: absolute;
+  right: -14px;
+  top: -30px;
+}

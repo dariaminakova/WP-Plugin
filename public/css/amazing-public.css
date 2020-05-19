@@ -1,0 +1,67 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.entry-content #project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 500px;
+  padding: 20px;
+}
+
+.entry-content #project .slideShow-container {
+  padding: 0 80px;
+  position: relative;
+  /* overflow: hidden; */
+  /* display: flex; */
+}
+
+.entry-content #project .slideShow-container .slides {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.entry-content #project .slideShow-container .slides .img {
+  width: 350px;
+  max-height: 350px;
+}
+
+.entry-content #project .slideShow-container .slides .web-site {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+}
+
+.entry-content #project .slideShow-container .slides .partners-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.entry-content #project .slideShow-container .slides .partners-title:hover {
+  text-decoration: underline;
+}
+
+.entry-content #project .slideShow-container .slides .date {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: #999999;
+}
+
+#project .prev,
+#project .next {
+  width: 17px;
+  height: 13px;
+  cursor: pointer;
+  padding: 16px;
+  transition: 0.6s ease;
+}
