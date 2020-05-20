@@ -24,12 +24,22 @@ if(array_key_exists("submit_slider_item", $_POST))
     $website = $_POST["website"];
     $description = $_POST["description"];
     $img = & $_FILES['img_add'];
-    Amazing_Admin::addNewSlider($wpdb, $table_name, $img, $website, $description );
+    if(defined($website) || defined($description)){
+        Amazing_Admin::addNewSlider($wpdb, $table_name, $img, $website, $description );
+        ?>
+        <div id="setting_error-settings_updated" class="updated settings-error notice is_dismissible">
+            New Slider Successfully Added
+        </div>
+    <?php
+    unset ($img, $website, $description);
+    } else {
     ?>
-    <div id="setting_error-settings_updated" class="updated settings-error notice is_dismissible">
-        New Slider Successfully Added
-    </div>
-<?php } 
+    <div class="settings-error notice is_dismissible">
+            Please fill in at least one of the requred fields
+        </div>
+    <?php
+    }
+ } 
 
 /* Update slider */
 
@@ -60,8 +70,25 @@ elseif(array_key_exists("delete_slider_by_id", $_POST))
 
 <div class="wrap">
     <h2>Admin Settings</h2>
-    <h3> For using following slider please add shortcode '[custom_slider]' </h3>
+    <h3> For using this plugin please add following shortcode '[custom_slider]' </h3>
     <hr>
+
+<!-- Add new slider -->
+
+    <div>
+        <h2>Please fill up following fields</h2>
+        <span>* - marked fileds are requered</span>
+        <form method="post" enctype="multipart/form-data" action="" id="add_new_slider" >
+            <?php wp_nonce_field( 'img_add', 'fileup_nonce' ); ?>
+            <label for="upload-img" class="upload-img button">load image...</label>
+            <input type="file" name="img_add" id="upload-img"></input>
+            <label for="website">Website *</label>
+            <textarea type="text" name="website" class="large-text" placeholder="Put your website here"></textarea>
+            <label for="description">Description *</label>
+            <textarea type="text" name="description" class="large-text" placeholder="Put your description here"></textarea>
+            <input type="submit" name="submit_slider_item" class="button button-primary submit-button" value="ADD SLIDER"></input>
+        </form>
+    </div>
 
 <!-- Show Preview from db -->
     <h2>Your future sliders</h2>
@@ -107,22 +134,5 @@ elseif(array_key_exists("delete_slider_by_id", $_POST))
             </li>
         <?php } ?>
         </div>
-<?php endif ?>
-
-<!-- Add new slider -->
-
-    <div>
-        <h2>Please fill up following fields</h2>
-
-        <form method="post" enctype="multipart/form-data" action="" id="add_new_slider" >
-            <?php wp_nonce_field( 'img_add', 'fileup_nonce' ); ?>
-            <label for="upload-img" class="upload-img button">load image...</label>
-            <input type="file" name="img_add" id="upload-img"></input>
-            <label for="website">Website</label>
-            <textarea type="text" name="website" class="large-text" placeholder="Put your website here"></textarea>
-            <label for="description">Description</label>
-            <textarea type="text" name="description" class="large-text" placeholder="Put your description here"></textarea>
-            <input type="submit" name="submit_slider_item" class="button button-primary submit-button" value="ADD SLIDER"></input>
-        </form>
-    </div>
+    <?php endif ?>
 </div>

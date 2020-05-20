@@ -1,35 +1,35 @@
-(function ($) {
-  "use strict";
+// (function ($) {
+//   "use strict";
 
-  /**
-   * All of the code for your public-facing JavaScript source
-   * should reside in this file.
-   *
-   * Note: It has been assumed you will write jQuery code here, so the
-   * $ function reference has been prepared for usage within the scope
-   * of this function.
-   *
-   * This enables you to define handlers, for when the DOM is ready:
-   *
-   * $(function() {
-   *
-   * });
-   *
-   * When the window is loaded:
-   *
-   * $( window ).load(function() {
-   *
-   * });
-   *
-   * ...and/or other possibilities.
-   *
-   * Ideally, it is not considered best practise to attach more than a
-   * single DOM-ready or window-load handler for a particular page.
-   * Although scripts in the WordPress core, Plugins and Themes may be
-   * practising this, we should strive to set a better example in our own work.
-   */
+/**
+ * All of the code for your public-facing JavaScript source
+ * should reside in this file.
+ *
+ * Note: It has been assumed you will write jQuery code here, so the
+ * $ function reference has been prepared for usage within the scope
+ * of this function.
+ *
+ * This enables you to define handlers, for when the DOM is ready:
+ *
+ * $(function() {
+ *
+ * });
+ *
+ * When the window is loaded:
+ *
+ * $( window ).load(function() {
+ *
+ * });
+ *
+ * ...and/or other possibilities.
+ *
+ * Ideally, it is not considered best practise to attach more than a
+ * single DOM-ready or window-load handler for a particular page.
+ * Although scripts in the WordPress core, Plugins and Themes may be
+ * practising this, we should strive to set a better example in our own work.
+ */
 
-})(jQuery);
+// })(jQuery);
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -39,17 +39,16 @@ function plusSlides(n) {
 }
 
 function showSlides(n) {
-  let i;
   let slides = document.getElementsByClassName("slides");
-  console.log(slides, n);
+  let arrLength = slides.length;
 
-  if (n > slides.length) {
+  if (n > arrLength) {
     slideIndex = 1;
   }
   if (n < 1) {
-    slideIndex = slides.length;
+    slideIndex = arrLength;
   }
-  for (i = 0; i < slides.length; i++) {
+  for (let i = 0; i < arrLength; i++) {
     slides[i].style.display = "none";
   }
   slides[slideIndex - 1].style.display = "block";

@@ -3,10 +3,6 @@
  * included in this file.
  */
 
-.wrap {
-  position: relative;
-}
-
 #adminmenu .wp-menu-image img {
   width: 20px;
 }
@@ -86,6 +82,7 @@
   justify-content: center;
   align-items: center;
   max-width: 500px;
+  position: relative;
 }
 
 .preview-table-item .img {
@@ -124,6 +121,7 @@
 #add_new_slider {
   display: flex;
   flex-direction: column;
+  margin: 20px;
 }
 
 label {
@@ -153,10 +151,10 @@ label {
   background-color: #d4d4d4;
   border-radius: 3px;
   border: 1px solid #888888;
-  top: 40%;
-  left: 20%;
+  top: 0;
+  left: 4%;
   opacity: 999;
-  z-index: 2;
+  z-index: 200;
 }
 
 .update_slider {
@@ -175,6 +173,10 @@ label {
 
 .position {
   position: absolute;
-  right: -14px;
-  top: -30px;
+  right: -10px;
+  top: -52px;
+}
+
+h2 {
+  margin-top: 45px;
 }

@@ -14,8 +14,6 @@
 .entry-content #project .slideShow-container {
   padding: 0 80px;
   position: relative;
-  /* overflow: hidden; */
-  /* display: flex; */
 }
 
 .entry-content #project .slideShow-container .slides {
